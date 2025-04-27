@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>When Tech Meets Teaching</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .info-box {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows the images to wrap to the next line if space is limited */
+            gap: 10px; /* Adds space between the images */
+            justify-content: center; /* Centers the images horizontally */
+            margin-top: 15px;
+        }
+        .image-container img {
+            width: 200px; /* Set width for the images */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Wollaton Park Lake</h1>
+        <p>The 25-acre lake was originally created in the late 18th century as part of the landscaping of the Wollaton Park estate. The lake was formed by damming a small stream that ran through the park, creating a picturesque body of water that became a focal point of the park’s landscape.</p>
+        <p>If you want get more infomation, please continue to the official website: <a href="https://friendsofwollatonpark.org.uk/wollaton-park/wollaton-park-lake/" target="_blank">https://friendsofwollatonpark.org.uk/wollaton-park/wollaton-park-lake/</a></p>
+        <button onclick="toggleInfo()">Explore various animals!</button>
+
+        <div class="info-box" id="infoBox" style="display:none;">
+            <p><strong>Animals at Wollaton Park Lake:</strong></p>
+            <p>Wollaton Park Lake is home to a variety of wildlife, including waterfowl, swans, and various species of ducks. The surrounding parkland provides shelter to squirrel, deer, and other wildlife. It’s a perfect spot for birdwatching and nature enthusiasts.</p>
+            <p><strong>Some of the species you might spot:</strong></p>
+
+            <!-- Image container with multiple images -->
+            <div class="image-container">
+                <img src="1.jpg">
+                <img src="2.jpg">
+                <img src="3.jpg">
+                <img src="4.jpg">
+                <img src="5.jpg">
+                <img src="6.jpg">
+                <img src="7.jpg">
+                <img src="8.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var infoBox = document.getElementById('infoBox');
+            infoBox.style.display = (infoBox.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

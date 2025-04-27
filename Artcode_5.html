@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz on School Facilities</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-image: url('Dark_Knight_Rises.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-position: center; /* 背景图片居中显示 */
+            background-attachment: fixed; /* 背景固定 */
+            color: black; /* 文字颜色为黑色 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 设置页面高度为视窗高度 */
+            text-align: center; /* 文字居中对齐 */
+        }
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.8); /* 背景透明度降低 */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .result-container {
+            margin-top: 20px;
+            display: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <p><strong>Wollaton Hall was once the filming location for Batman and is the prototype of Wayne Manor in The Dark Knight Rises!</strong></p>
+
+        <h1>Quick Quiz Challenge!</h1>
+        <p>What will be the theme of the next exhibition at Wollaton Hall Museum?</p>
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="benefit" value="Dinosaurs">
+                Discovering Dinosaurs
+            </label><br>
+            <label>
+                <input type="radio" name="benefit" value="World">
+                World of Wonder
+            </label><br>
+            <label>
+                <input type="radio" name="benefit" value="Space">
+                Space Journey
+            </label><br>
+            <label>
+                <input type="radio" name="benefit" value="Earth's Core">
+                Expedition to the Earth's Core
+            </label><br>
+            <button type="button" onclick="checkAnswer()">Submit Answer</button>
+        </form>
+        <div class="result-container" id="resultContainer">
+            <p id="resultText"></p>
+            <p id="nextStep"></p>
+        </div>
+    </div>
+    <script>
+        function checkAnswer() {
+            var radios = document.getElementsByName('benefit');
+            var chosen = '';
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    chosen = radios[i].value;
+                    break;
+                }
+            }
+
+            if (chosen === 'Dinosaurs') {
+                document.getElementById('resultText').innerHTML = "Congratulations, Thanks for your visiting";
+                document.getElementById('nextStep').innerHTML = "Believe that this hike not only enriched your knowledge and deepened your understanding of Wollaton Park, but also provided a wonderful opportunity to exercise your body and bask in the joy of sunshine";
+            } else {
+                document.getElementById('resultText').innerHTML = "You’re very close to the correct answer! To be precise, the answer should include prehistoric creatures.";
+                document.getElementById('nextStep').innerHTML = "Try again!";
+            }
+
+            document.getElementById('resultContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

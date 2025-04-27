@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz on Wollaton Hall</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info-box {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .info-container {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .content-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-container">
+        <h2>Explore Wollaton Hall</h2>
+        <p>Wollaton Hall is one of the country’s finest Grade I listed Elizabethan buildings with the largest dedicated Natural History Museum in Nottinghamshire. Herds of deer and a range of wildlife roam 500 acres of parkland at Wollaton, which is home to all kinds of habitats, including grassland, wetland, and woodland. Since opening its doors in 1926, Wollaton Hall has been home to the city’s Natural History Museum. It houses 750,000 objects; from fascinating fossils to surreal ‘spirit’ jars.</p>
+        <p>If you need more related information, you can visit the official website: <a href="https://wollatonhall.org.uk/" target="_blank">https://wollatonhall.org.uk/</a></p>
+    </div>
+
+    <div class="content-container">
+        <h1>Wollaton Museums</h1>
+        <p>Do you know what exhibition is going to be held in the museum next?</p>
+
+        <button onclick="toggleInfo()">Explore the Answer!</button>
+
+        <div class="info-box" id="infoBox" style="display:none;">
+            <p><strong>"Discovering Dinosaurs": </strong>"Tuesday 1st April 2025"</p>
+            <img src='Discovering-Dinosaurs-1024x683.jpg' alt="Discovering Dinosaurs Exhibition">
+            <p>'Discovering Dinosaurs', as part of its final stage of the ‘World of Wonder’ gallery restoration
+                and the on-going building restoration programmes committed to ensuring that Wollaton Hall’s Elizabethan
+                mansion, which is over four hundred years old, continues to remain financially sustainable and fit for
+                future generations to enjoy.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var infoBox = document.getElementById('infoBox');
+            infoBox.style.display = (infoBox.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
